@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Grading Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f3d3e;
+      --secondary: #ffffff;
+      --accent: #000000;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: var(--secondary);
+      color: var(--accent);
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      align-items: center;
+      background-color: var(--secondary);
+    }
+    .logo {
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--primary);
+    }
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero img {
+      max-width: 200px;
+      border-radius: 100px;
+      margin-top: 2rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .slider img {
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
+      scroll-snap-align: center;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .slider img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--primary);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Rafael.</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>👋 Hi, I’m Rafael</h1>
+    <p>A freelance color grading specialist, helping your photos look vibrant, aesthetic, and full of soul. Let’s make your visuals pop!</p>
+    <img src="https://via.placeholder.com/200" alt="Your Photo" />
+  </section>
+
+  <section class="slider" id="portfolio">
+    <img src="https://via.placeholder.com/300x400?text=Before" alt="Before" />
+    <img src="https://via.placeholder.com/300x400?text=After" alt="After" />
+    <img src="https://via.placeholder.com/300x400?text=Bright+Tone" alt="Bright Tone" />
+    <img src="https://via.placeholder.com/300x400?text=Moody" alt="Moody" />
+    <img src="https://via.placeholder.com/300x400?text=Vintage" alt="Vintage" />
+  </section>
+
+  <footer id="contact">
+    <p>📩 Contact me on Instagram @yourhandle or WhatsApp +62xxxxxxx</p>
+    <p>© 2025 Rafael. All rights reserved.</p>
+  </footer>
+</body>
+</html>
